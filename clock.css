@@ -1,0 +1,93 @@
+body{
+    height: 100vh;
+    margin: 0rem;
+    overflow: hidden;
+    font-family: 'poppins';
+    background-color: black;
+}
+
+#blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient( to right,#20A4F3, #941C2F);
+    animation: rotate 20s infinite;
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(200px);
+}
+
+@keyframes rotate {
+    
+    from{
+        rotate: 0deg;
+    }
+
+    50%{
+        scale: 1 1.5;
+    }
+
+    to{
+        rotate: 360deg;
+    }
+}
+
+#time {
+    width: auto;
+    font-size: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F1F2EB;
+    z-index: 3;
+}
+
+#clock-container {
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#progress-container {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#seconds {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 30px;
+    border-radius: 40px;
+    
+}
+
+#seconds::-webkit-progress-bar {
+    border-radius: 40px;
+}
+
+#seconds::-webkit-progress-value {
+    background-color:#F1F2EB;
+    border-radius: 40px;
+    transition: all 0.5s ease;
+}
